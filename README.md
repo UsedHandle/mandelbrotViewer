@@ -1,0 +1,2 @@
+# mandelbrotViewer
+OpenGL mandelbrot renderer
