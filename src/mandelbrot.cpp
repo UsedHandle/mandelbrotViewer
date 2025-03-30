@@ -77,8 +77,8 @@ static int fbwidth, fbheight;
 int main(){
 
     glfwInit();
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 #ifdef __APPLE__
@@ -197,14 +197,14 @@ int main(){
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(shaderProgram);
-	pollInput(window, cre, cim, diam);
+	    pollInput(window, cre, cim, diam);
     	
-	glUniform1i(glGetUniformLocation(shaderProgram, "fbwidth"), fbwidth);
-   	glUniform1i(glGetUniformLocation(shaderProgram, "fbheight"), fbheight);
-   	glUniform1ui(glGetUniformLocation(shaderProgram, "niterations"), 
+	    glUniform1i(glGetUniformLocation(shaderProgram, "fbwidth"), fbwidth);
+   	    glUniform1i(glGetUniformLocation(shaderProgram, "fbheight"), fbheight);
+   	    glUniform1ui(glGetUniformLocation(shaderProgram, "niterations"), 
 			512);
 	
-	glUniform1d(glGetUniformLocation(shaderProgram, "cre"), cre);
+	    glUniform1d(glGetUniformLocation(shaderProgram, "cre"), cre);
         glUniform1d(glGetUniformLocation(shaderProgram, "cim"), cim);
         glUniform1d(glGetUniformLocation(shaderProgram, "diam"), diam);
         
